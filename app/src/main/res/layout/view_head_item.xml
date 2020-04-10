@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_user_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/fl_list"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circular_red_shape">
+
+                <com.njwyt.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/ic_list"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="?df_30sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_messages"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="95dp"
+                android:background="@drawable/circular_blue_shape">
+
+                <com.njwyt.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/ic_message"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="?df_30sp" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:placeholderImage="@drawable/first"
+                app:roundAsCircle="true"
+                app:roundingBorderColor="@color/colorWhite"
+                app:roundingBorderWidth="2dp" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@color/colorWhite" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

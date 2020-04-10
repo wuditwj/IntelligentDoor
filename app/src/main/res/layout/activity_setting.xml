@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:orientation="vertical">
+
+        <com.njwyt.view.CustomActionBar
+            android:id="@+id/setting_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.njwyt.view.CustomActionBar>
+
+        <LinearLayout
+            android:id="@+id/ll_user_manage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/simple_selector"
+            android:gravity="center_vertical"
+            android:padding="15dp">
+
+            <com.njwyt.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_setting"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_manage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right">
+
+                <com.njwyt.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ic_goto"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/simple_selector"
+            android:gravity="center_vertical"
+            android:padding="15dp">
+
+            <com.njwyt.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_setting_language"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_manage_language" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right">
+
+                <com.njwyt.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ic_goto"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user_fontsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/simple_selector"
+            android:gravity="center_vertical"
+            android:padding="15dp">
+
+            <com.njwyt.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_setting_fontsize"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_manage_fontsize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right">
+
+                <com.njwyt.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ic_goto"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/simple_selector"
+            android:gravity="center_vertical"
+            android:padding="15dp">
+
+            <com.njwyt.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_setting_theme"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_manage_theme" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right">
+
+                <com.njwyt.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ic_goto"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_admin_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/simple_selector"
+            android:gravity="center_vertical"
+            android:padding="15dp">
+
+            <com.njwyt.view.IconTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_lock"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_manage_password" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right">
+
+                <com.njwyt.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ic_goto"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

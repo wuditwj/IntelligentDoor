@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 点自己头像进入的item列表 -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="messageHistory"
+            type="com.njwyt.entity.MessageHistory" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/transparent_selector"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <com.njwyt.view.IconTextView
+                android:id="@+id/tv_icon"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="@string/ic_not_read"
+                android:textColor="@color/colorWhite"
+                android:textSize="?df_24sp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:placeholderImage="@drawable/first"
+                app:roundAsCircle="true"
+                app:roundingBorderColor="@color/colorWhite"
+                app:roundingBorderWidth="2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_message_datatime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:shadowColor="@color/colorBlack"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="5"
+                android:text="8:08"
+                android:textColor="@color/colorWhite"
+                android:textSize="?df_20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:shadowColor="@color/colorBlack"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="5"
+                android:text="@string/duration"
+                android:textColor="@color/colorWhite"
+                android:textSize="?df_20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:shadowColor="@color/colorBlack"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="5"
+                android:text="@{messageHistory.duration + ``}"
+                android:textColor="@color/colorWhite"
+                android:textSize="?df_20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:shadowColor="@color/colorBlack"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="5"
+                android:text="@string/second"
+                android:textColor="@color/colorWhite"
+                android:textSize="?df_20sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

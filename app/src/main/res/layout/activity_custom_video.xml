@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="com.njwyt.intelligentdoor.CustomVideoActivity">
+
+    <SurfaceView
+        android:id="@+id/record_surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <!--&lt;!&ndash; 开始/结束 录制按钮 &ndash;&gt;-->
+    <!--<ImageView-->
+    <!--android:id="@+id/record_control"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:onClick="startRecord"-->
+    <!--android:src="@mipmap/ic_launcher" />-->
+
+    <Chronometer
+        android:id="@+id/record_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:format="%s"
+        android:textSize="@dimen/dp_20"
+        android:visibility="gone" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/video_head"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginTop="60dp"-->
+    <!--android:orientation="vertical"/>-->
+
+    <!--<ProgressBar-->
+    <!--android:id="@+id/video_progressbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:max="600"-->
+    <!--android:progressTint="@color/progressBarColor"-->
+    <!--android:progressBackgroundTint="@color/colorWhite"-->
+    <!--style="?android:attr/progressBarStyleHorizontal"/>-->
+
+    <LinearLayout
+        android:id="@+id/bar_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@color/half_transparent">
+
+        <View
+            android:id="@+id/time_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/progressBarColor" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/bar_id"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/out_circular"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/circular"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/in_circular"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="7.5dp"
+            android:src="@drawable/circular"
+            android:visibility="invisible" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            app:placeholderImage="@drawable/first"
+            app:roundAsCircle="true"
+            app:roundingBorderColor="@color/colorWhite"
+            app:roundingBorderWidth="2dp" />
+
+    </FrameLayout>
+
+    <com.njwyt.view.IconTextView
+        android:id="@+id/record_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:text="@string/ic_video_stop"
+        android:textColor="@color/colorRed"
+        android:textSize="80dp"
+        android:enabled="false"/>
+
+    <TextView
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="@color/colorBlack"
+        android:shadowRadius="1"
+        android:text="@string/customVideoText"
+        android:textColor="@color/colorWhite"
+        android:textSize="?df_16sp"/>
+
+
+</RelativeLayout>

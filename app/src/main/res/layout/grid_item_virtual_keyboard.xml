@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/btn_keys"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/soft_selector"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textSize="26sp" />
+
+    <RelativeLayout
+        android:id="@+id/imgDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/soft_selector">
+
+        <com.njwyt.view.IconTextView
+            android:gravity="center"
+            android:textSize="60dp"
+            android:text="@string/ic_back_to_back"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!--<ImageView-->
+            <!--android:padding="10dp"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true" />-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

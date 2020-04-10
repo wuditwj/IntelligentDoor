@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingTop="@dimen/dp_14"
+    android:paddingBottom="@dimen/dp_20"
+    android:orientation="vertical">
+    <TextView
+        android:layout_margin="@dimen/dp_10"
+        android:textSize="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_normal"
+        style="@style/dialog_difficulty_item_layout">
+        <TextView
+            android:text="@string/user_normal"
+            style="@style/dialog_selection_difficulty_text" />
+    </RelativeLayout>
+    <View
+        style="@style/dialog_difficulty_item_view"/>
+    <RelativeLayout
+        android:id="@+id/layout_medium"
+        style="@style/dialog_difficulty_item_layout">
+        <TextView
+            android:text="@string/user_medium"
+            style="@style/dialog_selection_difficulty_text" />
+
+    </RelativeLayout>
+    <View
+        style="@style/dialog_difficulty_item_view" />
+    <RelativeLayout
+        android:id="@+id/layout_briefness"
+        style="@style/dialog_difficulty_item_layout">
+        <TextView
+            android:text="@string/user_briefness"
+            style="@style/dialog_selection_difficulty_text"/>
+
+    </RelativeLayout>
+</LinearLayout>

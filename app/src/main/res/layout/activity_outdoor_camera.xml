@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlack">
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity=""
+            android:scaleType="center"/>
+
+        <SurfaceView
+            android:id="@+id/sv_draw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <seu.smartdoor.CameraPreview
+            android:id="@+id/usb_camera_surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/fl_guest_recording"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <com.njwyt.view.IconTextView
+            android:id="@+id/tv_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="65dp"
+            android:text="@string/ic_video_stop"
+            android:textColor="@color/colorRed"
+            android:visibility="gone"
+            android:textSize="80dp"/>
+
+    </RelativeLayout>
+</layout>

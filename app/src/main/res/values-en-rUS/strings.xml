@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">IntelligentDoor</string>
+
+    <!-- 主页面 -->
+    <string name="scanning">Scanning</string>
+    <string name="message_datatime">Time：</string>
+    <string name="up">Previous</string>
+    <string name="down">Next</string>
+    <string name="previous_day">Yesterday</string>
+    <string name="next_day">Tomorrow</string>
+    <string name="play">Play/Delete</string>
+    <string name="setting">Setting</string>
+    <string name="guest_recording">Guest Recording</string>
+    <string name="user_manage">User Management</string>
+    <string name="user_manage_language">System Language</string>
+    <string name="user_manage_fontsize">System Font</string>
+    <string name="user_manage_theme">System Themes</string>
+    <string name="user_manage_password">System Passowrd</string>
+    <string name="change_pwd">Set Password</string>
+    <string name="add_user">Add user</string>
+    <string name="delete">Delete</string>
+    <string name="duration">Time：</string>
+    <string name="second"> sec</string>
+    <string name="back">Back</string>
+
+    <string name="dialog_title">Prompt</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="title_delete">Do you want to delete this message?</string>
+    <string name="title_pas1">The default password is</string>
+    <string name="title_pas2">Do you need to modify?</string>
+    <string name="title_enter_pwd">Please enter password</string>
+    <string name="title_enter_admin_pwd">Please enter administrator password</string>
+    <string name="title_pwd">Enter Password</string>
+    <string name="title_pasisno">Wrong Password</string>
+    <string name="title_see_screen">See Screen</string>
+    <string name="title_pwd_error">Wrong password, please try again.</string>
+
+    <!--用户设置界面-->
+    <string name="user_head">Avatar</string>
+    <string name="user_name">User Name</string>
+    <string name="user_passage">Password</string>
+    <string name="user_difficulty">Operation Level</string>
+    <string name="user_language">Language</string>
+    <string name="user_briefness">Simple</string>
+    <string name="user_medium">Middle</string>
+    <string name="user_normal">Senior</string>
+    <string name="user_setting">Setting</string>
+    <string name="difficulty">Please select the level of operation:</string>
+    <string name="oldpassage">Please enter old password</string>
+    <string name="newpassage">Please enter new password</string>
+    <string name="newpassagetoo">Enter new password again</string>
+    <string name="addpassage">Please setting password</string>
+    <string name="addpassagetoo">Enter password again</string>
+    <string name="ok">Confirm</string>
+    <string name="off">Cancel</string>
+    <string name="cancel">Cancel</string>
+    <string name="del_del">. Do you want to delete this user?</string>
+    <string name="del_hint">Prompt</string>
+    <string name="del_nowdel">Deleting user information.</string>
+    <string name="del_ok">Successfully Deleted</string>
+    <string name="changepas_four">Please enter a four digit password.</string>
+    <string name="changepas_fourtoo">The two input password is different. Please re-enter it.</string>
+    <string name="change_ok">Modification Successful</string>
+    <string name="use">USE</string>
+
+    <string name="user_fontsize">Font Size</string>
+    <string name="user_theme">Theme</string>
+    <string name="fontsize_big">Big</string>
+    <string name="fontsize_medium">Medium</string>
+    <string name="fontsize_small">Small</string>
+    <string name="dialog_fontsize">Please select the font size:</string>
+    <string name="dialog_theme">Please select the theme:</string>
+    <string name="theme_simple">Simple</string>
+    <string name="title_language">Change the language</string>
+    <string name="title_fontsize">Modify font size</string>
+    <string name="title_theme">Modify the theme</string>
+    <string name="settingset_title_language">Select Language</string>
+    <string name="settingset_title_fontsize">Select Font</string>
+    <string name="settingset_title_theme">Select Theme</string>
+
+    <!--自定义录像界面-->
+    <string name="stop">Stop</string>
+    <string name="nocamera">Failed to get camera！</string>
+    <string name="messageok">Leaving a message successful.</string>
+    <string name="SDcardisxists">Check to see if your SD card exists！</string>
+    <string name="finish">Finish</string>
+    <string name="again">Replay</string>
+
+    <string name="ic_arrow_right">&#xe6a7;</string>
+    <string name="ic_setting">&#xe77e;</string>
+    <string name="ic_goto">&#xe600;</string>
+    <string name="ic_send">&#xe68d;</string>
+    <string name="ic_not_read">&#xe60b;</string>
+    <string name="ic_save">&#xe62c;</string>
+    <string name="ic_back">&#xe60d;</string>
+    <string name="ic_success">&#xe6c1;</string>
+    <string name="photoIsSaved">Is Saved ...</string>
+    <string name="passIsFour">Password length cannot exceed 4 digits</string>
+    <string name="isBuffering">Is the buffer ...</string>
+    <string name="isTheLastOne">It\'s already the last video</string>
+    <string name="isTheFirstOne">It\'s already the first video</string>
+    <string name="replaceHead">Replace the head</string>
+    <string name="theBigPicture">Look at a big picture</string>
+    <string name="customVideoText">Click save message and long press can cancel the current message</string>
+    <string name="passIsUsed">"The password has been used, please enter again "</string>
+</resources>

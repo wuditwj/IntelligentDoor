@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.njwyt.view.CameraSurfaceView
+            android:id="@+id/camera_surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:cameraId="0" />
+
+        <SurfaceView
+            android:id="@+id/sv_draw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--<com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        </eightbitlab.com.blurview.BlurView>-->
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_test_lens"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="1dp"
+            android:shadowColor="@color/colorBlack"
+            android:shadowRadius="1"
+            android:text="3"
+            android:textColor="@color/colorWhite"
+            android:textSize="60sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="30dp"
+            android:src="@drawable/ic_frame"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/view_scan_line"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/scan_line"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_my_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/rl_my_head"
+            android:layout_alignLeft="@id/rl_my_head"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/fl_messages"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="125dp"
+                android:background="@drawable/circular_blue_shape">
+
+                <com.njwyt.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/ic_envelope"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="?df_30sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_exit"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/circular_red_shape">
+
+                <com.njwyt.view.IconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/ic_exit"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="?df_30sp" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_my_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_my_head"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                app:placeholderImage="@drawable/ic_action_name"
+                app:roundAsCircle="true"
+                app:roundingBorderColor="@color/colorWhite"
+                app:roundingBorderWidth="2dp" />
+
+            <ImageView
+                android:id="@+id/iv_success"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_success" />
+
+            <com.njwyt.view.RoundProgressBar
+                android:id="@+id/round_progress_bar"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerInParent="true"
+                app:roundColor="@color/transparent"
+                app:roundProgressColor="@color/colorWhite"
+                app:roundWidth="2dp"
+                app:textIsDisplayable="false" />
+
+            <TextView
+                android:id="@+id/tv_unread"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignRight="@id/round_progress_bar"
+                android:background="@drawable/circular_red_shape"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="?df_14sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:paddingTop="60dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_guest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_guest"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:placeholderImage="@drawable/ic_guest"
+                app:roundAsCircle="true"
+                app:roundingBorderColor="@color/colorWhite"
+                app:roundingBorderWidth="2dp" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_small_surface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <seu.smartdoor.CameraPreview
+                android:id="@+id/usb_camera_surface_view"
+                android:layout_width="135dp"
+                android:layout_height="180dp" />
+
+            <!-- usb摄像头，原来大小是320*240
+             现在是135*180-->
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_see_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:paddingTop="1dp"
+            android:shadowColor="@color/colorBlack"
+            android:shadowRadius="1"
+            android:text="@string/title_see_screen"
+            android:textColor="@color/colorWhite"
+            android:textSize="?df_18sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_login"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="1dp"
+                android:shadowColor="@color/colorBlack"
+                android:shadowRadius="1"
+                android:text="@string/title_pwd"
+                android:textColor="@color/colorWhite"
+                android:textSize="?df_18sp" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@color/colorWhite" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_setting_pwd"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_alignParentRight="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="0.1dp"
+            android:background="@color/colorBlack" />
+
+        <!--<ImageView
+            android:id="@+id/iv_temp_bmp"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:visibility="visible" />-->
+
+        <RelativeLayout
+            android:id="@+id/rl_screensaver"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/theme_star_0"
+            android:visibility="gone">
+            <!-- 屏保 -->
+
+            <com.njwyt.view.ScreensaverViewPager
+                android:id="@+id/vp_screensaver"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="200dp">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="100sp" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:id="@+id/tv_date_ch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 识别率 -->
+        <TextView
+            android:id="@+id/tv_match_ratio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:shadowColor="@color/colorBlack"
+            android:shadowRadius="1"
+            android:text="识别率：0"
+            android:textColor="@color/colorWhite"
+            android:textSize="?df_24sp" />
+
+        <ImageView
+            android:id="@+id/iv_temp_bmp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

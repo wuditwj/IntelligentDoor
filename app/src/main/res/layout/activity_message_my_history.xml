@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- <com.facebook.drawee.view.SimpleDraweeView
+                 android:id="@+id/sdv_background"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:visibility="gone"/>
+
+             <eightbitlab.com.blurview.BlurView
+                 android:id="@+id/blur_view"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:visibility="gone">
+
+             </eightbitlab.com.blurview.BlurView>
+ -->
+
+            <ImageView
+                android:id="@+id/iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/half_transparent_2">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="@color/colorBlack"
+                        android:textColor="@color/colorWhite"
+                        android:layout_centerInParent="true"
+                        android:textSize="?df_20sp" />
+
+                    <com.njwyt.view.IconTextView
+                        android:id="@+id/tv_back"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/ic_back"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="?df_30sp" />
+                </RelativeLayout>
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/rv_message_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:background="@color/half_transparent_2" />
+
+                <!--<LinearLayout
+                    android:id="@+id/ll_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@color/half_transparent"
+                    android:gravity="center|bottom"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.wefika.horizontalpicker.HorizontalPicker
+                        android:id="@+id/hp_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:background="@color/colorWhite" />
+                </LinearLayout>-->
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@color/half_transparent_2"
+                    android:gravity="center|bottom"
+                    android:orientation="vertical">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:clipChildren="false" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:background="@color/half_transparent_2"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_last"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_previous"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="1dp"
+                            android:shadowColor="@color/colorBlack"
+                            android:text="@string/up"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="?df_16sp" />
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="1dp"
+                            android:shadowColor="@color/colorBlack"
+                            android:text="@string/play"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="?df_16sp" />
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="1dp"
+                            android:shadowColor="@color/colorBlack"
+                            android:text="@string/down"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="?df_16sp" />
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorWhite" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

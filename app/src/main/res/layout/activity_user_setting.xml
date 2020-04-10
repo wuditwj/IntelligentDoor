@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/userSettingBackground"
+    tools:context="com.njwyt.intelligentdoor.UserSettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.njwyt.view.CustomActionBar
+            android:id="@+id/usersetting_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_head"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="@string/user_head" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/user_head"
+                app:placeholderImage="@drawable/first"
+                app:roundAsCircle="true"
+                app:roundingBorderColor="@color/colorWhite"
+                app:roundingBorderWidth="2dp"
+                android:src="@drawable/first"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/dp_20"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1" />
+
+        <RelativeLayout
+            android:id="@+id/layout_id"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="@string/user_name" />
+
+            <TextView
+                android:id="@+id/user_id"
+                style="@style/userSet"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="001" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1" />
+
+        <RelativeLayout
+            android:id="@+id/layout_passage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="@string/user_passage" />
+
+            <TextView
+                android:id="@+id/user_passage"
+                style="@style/userSet"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="****" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1" />
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/layout_difficulty"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:background="@color/colorWhite">-->
+
+            <!--<TextView-->
+                <!--style="@style/userSet"-->
+                <!--android:layout_marginLeft="@dimen/dp_20"-->
+                <!--android:text="@string/user_difficulty" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/user_difficulty"-->
+                <!--style="@style/userSet"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="@dimen/dp_20"-->
+                <!--android:text="@string/user_normal" />-->
+        <!--</RelativeLayout>-->
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/dp_1" />-->
+        <RelativeLayout
+            android:id="@+id/layout_language"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="@string/user_language" />
+
+            <TextView
+                android:id="@+id/user_language"
+                style="@style/userSet"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="@string/language_chinese" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1" />
+        <RelativeLayout
+            android:id="@+id/layout_fontsize"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                style="@style/userSet"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:text="@string/user_fontsize" />
+
+            <TextView
+                android:id="@+id/user_fontsize"
+                style="@style/userSet"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="@string/fontsize_medium" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1" />
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/layout_theme"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:background="@color/colorWhite">-->
+
+            <!--<TextView-->
+                <!--style="@style/userSet"-->
+                <!--android:layout_marginLeft="@dimen/dp_20"-->
+                <!--android:text="@string/user_theme" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/user_theme"-->
+                <!--style="@style/userSet"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="@dimen/dp_20"-->
+                <!--android:text="@string/theme_simple" />-->
+        <!--</RelativeLayout>-->
+    </LinearLayout>
+</LinearLayout>

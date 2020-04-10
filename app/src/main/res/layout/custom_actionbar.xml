@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_50"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/actionbar_left"
+        android:layout_width="60dp"
+        android:background="@drawable/custon_actionbar_back_shape"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+        <com.njwyt.view.IconTextView
+            android:id="@+id/tv_left"
+            android:text="@string/ic_back"
+            style="@style/actionBarTv" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/actionbar_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/tv_center"
+            style="@style/actionBarTv"
+            android:text=""
+            android:layout_weight="1"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/actionbar_right"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/custon_actionbar_back_shape"
+        android:layout_centerVertical="true">
+        <com.njwyt.view.IconTextView
+            android:id="@+id/tv_right"
+            style="@style/actionBarTv"
+            android:text="@string/ic_save"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

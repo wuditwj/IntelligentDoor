@@ -1,0 +1,26 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <!--透明状态栏-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--使状态栏，导航栏可绘制-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="Transparent" parent="AppTheme.Base">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--透明状态栏-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--使状态栏，导航栏可绘制-->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="Edit_CheckBox" parent="@android:style/Widget.Material.CompoundButton.CheckBox">
+        <item name="android:colorControlActivated">@color/colorWhite</item>
+        <item name="android:colorControlNormal">@color/colorWhite</item>
+    </style>
+</resources>

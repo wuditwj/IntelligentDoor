@@ -1,0 +1,14 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="Transparent" parent="AppTheme.Base">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>

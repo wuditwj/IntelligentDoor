@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/root_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_transparent_2">
+
+    <RelativeLayout
+        android:id="@id/fragment_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="#3C3F41"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_20">
+
+        <ImageView
+            android:id="@+id/recording_head"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:src="@drawable/first" />
+
+        <TextView
+            android:id="@+id/play_recording_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@id/recording_head"
+            android:text="2016年1月1日"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dp_16" />
+
+        <com.njwyt.view.IconTextView
+            android:id="@+id/icon_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/ic_false"
+            android:textColor="@color/colorWhite"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:id="@+id/seek_and_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/play_recording_title"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/recording_head"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/play_recording_seek_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1" />
+            <!--时间-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/play_recording_time_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="00:00"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="/"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/play_recording_time_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:text="00:00"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<com.njwyt.view.IconTextView-->
+        <!--android:layout_toRightOf="@id/recording_head"-->
+        <!--android:text="@string/ic_volume"-->
+        <!--android:textSize="@dimen/dp_20"-->
+        <!--android:layout_marginLeft="@dimen/dp_30"-->
+        <!--android:id="@+id/ic_volum"-->
+        <!--android:layout_margin="30dp"-->
+        <!--android:layout_below="@id/seek_and_time"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/seek_and_time"
+            android:layout_marginLeft="@dimen/dp_30">
+
+            <!--<com.njwyt.view.IconTextView-->
+            <!--android:id="@+id/video_last"-->
+            <!--android:padding="20dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/ic_video_last"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="20dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:background="@drawable/control_button_selector"/>-->
+            <com.njwyt.view.IconTextView
+                android:id="@+id/video_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/control_button_selector"
+                android:padding="20dp"
+                android:text="@string/ic_video_suspend"
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp" />
+            <!--<com.njwyt.view.IconTextView-->
+            <!--android:id="@+id/video_next"-->
+            <!--android:padding="20dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/ic_video_next"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="20dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:background="@drawable/control_button_selector"/>-->
+        </RelativeLayout>
+
+        <!--音量条-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/recording_head"
+            android:orientation="vertical">
+
+            <com.njwyt.view.IconTextView
+                android:id="@+id/volum_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/control_button_selector"
+                android:text="@string/ic_plus"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dp_20" />
+
+            <ProgressBar
+                android:id="@+id/volum_progress"
+                android:layout_width="10dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center_horizontal"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/progress_vertical_gradient_simple_shape" />
+
+            <com.njwyt.view.IconTextView
+                android:id="@+id/volum_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/control_button_selector"
+                android:text="@string/ic_reduce"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dp_20" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

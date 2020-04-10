@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextureView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <View
+        android:id="@+id/back_view"
+        android:background="@color/colorBlack"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--控制台-->
+    <RelativeLayout
+        android:id="@+id/control_layout"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/half_transparent_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <!--进度条+时间-->
+        <LinearLayout
+            android:id="@+id/seek_and_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"/>
+            <!--时间-->
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/time_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="00:00"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="/"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/time_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="00:00"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14dp"
+                    android:layout_marginRight="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--播放控制台-->
+        <RelativeLayout
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seek_and_time">
+
+            <com.njwyt.view.IconTextView
+                android:id="@+id/video_last"
+                android:padding="30dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_video_last"
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/control_button_selector"/>
+            <com.njwyt.view.IconTextView
+                android:id="@+id/video_play"
+                android:padding="30dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_video_suspend"
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/control_button_selector"/>
+            <com.njwyt.view.IconTextView
+                android:id="@+id/video_next"
+                android:padding="30dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ic_video_next"
+                android:textColor="@color/colorWhite"
+                android:textSize="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/control_button_selector"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.njwyt.view.IconTextView
+        android:id="@+id/video_again"
+        android:padding="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ic_video_rebroadcast"
+        android:textSize="50dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone"/>
+
+    <com.njwyt.view.IconTextView
+        android:id="@+id/video_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:text="@string/ic_video_close"
+        android:textSize="20dp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/control_button_selector"/>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/digital_layout"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:background="@drawable/video_digital_shape"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.njwyt.view.IconTextView
+            android:id="@+id/icon_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/icon_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"
+            android:text="100"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:text="%"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="small_size">14sp</dimen>
+    <dimen name="middle_size">18sp</dimen>
+    <dimen name="big_size">20sp</dimen>
+    <dimen name="bigger_size">26sp</dimen>
+    <dimen name="calc_size">16sp</dimen>
+    <dimen name="toolbar_padding_top">25dp</dimen>
+    <dimen name="toolbar_heigh">80dp</dimen>
+
+    <attr name="titleText" format="string" />
+    <attr name="titleTextColor" format="color" />
+    <attr name="titleTextSize" format="dimension" />
+
+    <declare-styleable name="AuthCodeView">
+        <attr name="titleText" />
+        <attr name="titleTextColor" />
+        <attr name="titleTextSize" />
+    </declare-styleable>
+
+</resources>

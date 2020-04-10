@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/rl_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/half_transparent_2">
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:shadowColor="@color/colorBlack"
+                        android:text="@string/guest_recording"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="?df_20sp" />
+
+                    <com.njwyt.view.IconTextView
+                        android:id="@+id/tv_back"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/ic_back"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="?df_30sp" />
+
+                    <com.njwyt.view.IconTextView
+                        android:id="@+id/tv_edit"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center"
+                        android:text="@string/ic_delete"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="?df_20sp" />
+
+                </RelativeLayout>
+
+                <com.jcodecraeer.xrecyclerview.XRecyclerView
+                    android:id="@+id/rv_guest_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:background="@color/half_transparent_2" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_recording"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>
